@@ -3,6 +3,7 @@ package com.example.koindi.core
 import android.app.Application
 import com.example.koindi.di.module.appModule
 import com.example.koindi.di.module.javaModule
+import com.example.koindi.di.module.scopedModule
 import com.example.koindi.di.module.viewModelModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
@@ -22,7 +23,7 @@ class MyApplication : Application() {
 
             androidContext(this@MyApplication)
 
-            modules(appModule, viewModelModule, javaModule)
+            modules(appModule, viewModelModule, javaModule, scopedModule)
         }
     }
 }
